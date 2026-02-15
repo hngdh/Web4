@@ -1,0 +1,150 @@
+.login-container {
+    width: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 4rem;
+    padding: 3rem;
+}
+
+.start-header,
+.login-card {
+    background-color: rgba(231, 255, 241, 0.6);
+    border-radius: 25px;
+    padding: 3rem;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.group-info,
+.variant-info {
+    font-size: 3rem;
+    color: black;
+    font-weight: 600;
+    margin: 0.5rem 0;
+}
+
+.p-field {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.p-field label {
+    font-size: 3rem;
+    font-weight: 400;
+    color: black;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.p-field input,
+.p-field p-password{
+    margin: 0 auto;
+    display: block;
+}
+
+:host ::ng-deep .p-card{
+    background: transparent;
+    box-shadow: none;
+}
+
+:host ::ng-deep .p-inputtext {
+    font-size: 2.5rem;
+    padding: 1rem;
+    text-align: center;
+    background: rgba(231, 255, 241, 0.6);
+    color: black;
+    border: 2px solid transparent;
+}
+
+:host ::ng-deep .p-inputtext:enabled:hover,
+:host ::ng-deep .p-inputtext:enabled:focus{
+    border-color: #013220;
+    box-shadow: 0 0 0 0.2rem rgba(1, 50, 32, 0.2);
+}
+
+:host ::ng-deep .p-password .p-icon {
+    position: absolute;
+    transform: translateY(-50%);
+    user-select: none;
+    -webkit-user-select: none;
+    right: 1.5rem;
+    color: #013220;
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+}
+
+.button-container {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+:host ::ng-deep .expand-effect-btn.btn-login:hover {
+    width: 145px;
+}
+
+:host ::ng-deep .expand-effect-btn.btn-register:hover {
+    width: 170px;
+}
+
+:host ::ng-deep .expand-effect-btn.btn-back-to-login:hover {
+    width: 230px;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    height: 60px;
+}
+
+@media (min-width: 1210px) {
+    .login-container {
+        max-width: 900px;
+    }
+
+    .p-field input,
+    .p-field p-password{
+        width: 500px;
+    }
+}
+
+@media (min-width: 891px) and (max-width: 1209px) {
+    .login-container {
+        max-width: 700px;
+    }
+
+    .p-field input,
+    .p-field p-password{
+        width: 400px;
+    }
+}
+
+@media (max-width: 890px) {
+    .login-container {
+        max-width: 500px;
+    }
+
+    .p-field input,
+    .p-field p-password{
+        width: 300px;
+    }
+}

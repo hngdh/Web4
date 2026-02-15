@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css?family=Exo");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Exo', sans-serif;
+}
+
+html {
+    font-size:50%;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: #013220;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 5rem;
+    color: #013220;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    letter-spacing: 2px;
+}
+
+h2 {
+    font-size: 4rem;
+    color: #013220;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+}
+
+.p-toast{
+    width: 350px;
+    font-size: 2.5rem;
+}
+
+.p-toast .p-toast-message {
+    border-radius: 20px;
+    background-color: rgba(1, 50, 32, 0.6);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.p-toast .p-toast-message .p-toast-icon-close-icon {
+    color: rgba(255, 255, 255, 0.7);
+    width: 20px;
+    height: 20px;
+}
+
+.p-toast .p-toast-message .p-toast-message-content .p-toast-message-icon {
+    scale: 2;
+    width: 45px;
+    translate: 55% 95%;
+}
+
+.p-toast .p-toast-message-success .p-toast-message-icon {
+    color: rgba(0, 180, 0, 0.9);
+}
+
+.p-toast .p-toast-message-error .p-toast-message-icon {
+    color: rgba(200, 0, 0, 0.95);
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(231, 255, 241, 0.36);
+}
+
+.p-button:focus,
+.p-button:active {
+    outline: none;
+    box-shadow: none;
+}
+
+.p-button-label {
+    font-weight: 400;
+}
+
+.p-button-loading-icon {
+    font-size: 4rem;
+    color: #013220;
+    position: absolute;
+    translate: -50% -50%;
+    width: 4rem;
+    height: 4rem;
+    z-index: 2;
+    transition: none !important;
+}
+
+.expand-effect-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: transparent;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+}
+
+.expand-effect-btn .p-button-icon {
+    font-size: 4rem;
+    color: #013220;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    transition: all 0.4s ease-in-out;
+}
+
+.expand-effect-btn .p-button-label {
+    font-size: 3rem;
+    opacity: 0;
+    white-space: nowrap;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    transition: all 0.4s ease-in-out;
+}
+
+.expand-effect-btn:hover {
+    background-color: rgba(231, 255, 241, 0.9);
+    color: #013220;
+    box-shadow: 0 5px 15px rgba(1, 50, 32, 0.3);
+    border-color: #013220;
+}
+
+.expand-effect-btn:hover .p-button-icon {
+    left: calc(100% - 50px);
+    translate: 50% 0;
+    color: #013220;
+}
+
+.expand-effect-btn:hover .p-button-label {
+    opacity: 1;
+}
+
+.btn-icon-left:hover .p-button-icon {
+    left: 20px;
+}
+
+.expand-effect-btn.btn-icon-left:hover .p-button-label {
+    opacity: 1;
+    left: 65px;
+}

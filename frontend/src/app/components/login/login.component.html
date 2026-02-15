@@ -1,0 +1,124 @@
+<div class="login-container">
+    <p-toast></p-toast>
+
+    <header class="start-header">
+        <div class="student-info">
+            <h1>Dinh Huy Hoang</h1>
+            <p class="group-info">Group: P3231</p>
+            <p class="variant-info">Variant: 8</p>
+        </div>
+    </header>
+
+    <div class="login-card">
+        <p-card *ngIf="!showRegister">
+            <ng-template pTemplate="header">
+                <h1>Login</h1>
+            </ng-template>
+
+            <div class="p-fluid">
+                <div class="p-field">
+                    <label for="username">Username</label>
+                    <input
+                            (keyup.enter)="onLogin()"
+                            [(ngModel)]="credentials.username"
+                            [disabled]="loading"
+                            id="username"
+                            pInputText
+                            placeholder="Enter username"
+                    />
+                </div>
+
+                <div class="p-field">
+                    <label for="password">Password</label>
+                    <p-password
+                            (keyup.enter)="onLogin()"
+                            [(ngModel)]="credentials.password"
+                            [disabled]="loading"
+                            [feedback]="false"
+                            [toggleMask]="true"
+                            placeholder="Enter password"
+                    ></p-password>
+                </div>
+            </div>
+
+            <ng-template pTemplate="footer">
+                <div class="button-container">
+                    <p-button
+                            (onClick)="onLogin()"
+                            [loading]="loading"
+                            icon="pi pi-sign-in"
+                            label="Login"
+                            styleClass="expand-effect-btn btn-login"
+                    ></p-button>
+                    <p-button
+                            (onClick)="toggleForm()"
+                            [disabled]="loading"
+                            icon="pi pi-user-plus"
+                            label="Register"
+                            styleClass="expand-effect-btn btn-register"
+                    ></p-button>
+                </div>
+            </ng-template>
+        </p-card>
+
+        <p-card *ngIf="showRegister">
+            <ng-template pTemplate="header">
+                <h1>Register</h1>
+            </ng-template>
+
+            <div class="p-fluid">
+                <div class="p-field">
+                    <label for="reg-username">Username</label>
+                    <input
+                            [(ngModel)]="registerData.username"
+                            [disabled]="loading"
+                            id="reg-username"
+                            pInputText
+                            placeholder="Choose a username"
+                    />
+                </div>
+
+                <div class="p-field">
+                    <label for="reg-password">Password</label>
+                    <p-password
+                            [(ngModel)]="registerData.password"
+                            [disabled]="loading"
+                            [feedback]="false"
+                            [toggleMask]="true"
+                            placeholder="6-50 characters"
+                    ></p-password>
+                </div>
+
+                <div class="p-field">
+                    <label for="group">Group Number</label>
+                    <input
+                            [(ngModel)]="registerData.groupNumber"
+                            [disabled]="loading"
+                            id="group"
+                            pInputText
+                            placeholder="Enter group number"
+                    />
+                </div>
+            </div>
+
+            <ng-template pTemplate="footer">
+                <div class="button-container">
+                    <p-button
+                            (onClick)="toggleForm()"
+                            [disabled]="loading"
+                            icon="pi pi-arrow-left"
+                            label="Back to Login"
+                            styleClass="expand-effect-btn btn-icon-left btn-back-to-login"
+                    ></p-button>
+                    <p-button
+                            (onClick)="onRegister()"
+                            [loading]="loading"
+                            icon="pi pi-user-plus"
+                            label="Register"
+                            styleClass="expand-effect-btn btn-register"
+                    ></p-button>
+                </div>
+            </ng-template>
+        </p-card>
+    </div>
+</div>
