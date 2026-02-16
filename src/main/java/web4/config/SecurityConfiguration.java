@@ -44,6 +44,8 @@ public class SecurityConfiguration {
                             "/*.png", "/*.svg", "/*.jpg",
                             "/*.woff", "/*.woff2", "/*.ttf", "/*.eot"
                     ).permitAll()
+                    .requestMatchers("/api/auth/**").permitAll()
+                    .requestMatchers("/**/{path:[^.]*}").permitAll()
                     .anyRequest().authenticated()
             )
             .sessionManagement(session -> session

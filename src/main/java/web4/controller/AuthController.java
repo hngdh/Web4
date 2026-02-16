@@ -101,9 +101,4 @@ public class AuthController {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(Map.of("valid", false));
         }
     }
-
-    @RequestMapping(value = "/**/{path:[^\\.]*}")
-    public String forward() {
-        return "forward:/index.html";
-    }
 }
