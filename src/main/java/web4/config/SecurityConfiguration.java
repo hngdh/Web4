@@ -40,7 +40,9 @@ public class SecurityConfiguration {
                             "/*.js",
                             "/*.css",
                             "/assets/**",
-                            "/favicon.ico"
+                            "/*.ico",
+                            "/*.png", "/*.svg", "/*.jpg",
+                            "/*.woff", "/*.woff2", "/*.ttf", "/*.eot"
                     ).permitAll()
                     .anyRequest().authenticated()
             )

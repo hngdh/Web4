@@ -290,30 +290,22 @@
 }
 
 @media (min-width: 891px) and (max-width: 1209px) {
+    .main-container {
+        width: 100vh;
+    }
+
     .title {
         font-size: 1.5rem;
     }
 
-    .content-wrapper {
-        gap: 1rem;
-    }
-
     .canvas-wrapper {
-        height: 450px;
-    }
-
-    .slider-container label {
-        font-size: 1rem;
+        height: 625px;
     }
 }
 
 @media (max-width: 890px) {
     .main-container {
-        padding: 0.5rem;
-    }
-
-    .header {
-        padding: 1rem;
+        width: 50vh;
     }
 
     .header-content {
@@ -321,47 +313,12 @@
         text-align: center;
     }
 
-    .title {
-        font-size: 1.2rem;
-        order: -1;
-    }
-
-    .user-info {
-        order: 1;
-    }
-
-    .logout-btn {
-        order: 2;
-        width: 100%;
-    }
-
     .content-wrapper {
         grid-template-columns: 1fr;
         height: auto;
-        gap: 1rem;
     }
 
     .canvas-wrapper {
-        height: 300px;
-    }
-
-    .button-group {
-        flex-direction: column;
-    }
-
-    .results-panel {
-        max-height: 400px;
-    }
-
-    .results-table ::ng-deep .p-datatable {
-        font-size: 0.8rem;
-    }
-
-    .slider-container {
-        margin-bottom: 1.5rem;
-    }
-
-    .slider-container label {
-        font-size: 0.95rem;
+        height: 400px;
     }
 }

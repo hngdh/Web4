@@ -1,5 +1,3 @@
--- CREATE DATABASE web4;
-
 \c web4;
 
 CREATE TABLE IF NOT EXISTS users
